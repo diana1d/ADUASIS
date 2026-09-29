@@ -66,4 +66,6 @@ public class Activo
     public Area? Area { get; set; }
     public Usuario? UsuarioAsignado { get; set; }
     public Usuario? CreadoPor { get; set; }
+    public ICollection<Asignacion> Asignaciones { get; set; } = [];
+    public ICollection<HistorialActivo> Historial { get; set; } = [];
 }

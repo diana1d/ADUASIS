@@ -24,10 +24,16 @@ public static class ConfiguracionServicios
         servicios.AddScoped<IRepositorioActivos, RepositorioActivos>();
         servicios.AddScoped<IRepositorioCatalogos, RepositorioCatalogos>();
         servicios.AddScoped<IRepositorioUbicaciones, RepositorioUbicaciones>();
+        servicios.AddScoped<IRepositorioHistorial, RepositorioHistorial>();
+        servicios.AddScoped<IRepositorioAsignaciones, RepositorioAsignaciones>();
 
         // Servicios
         servicios.AddScoped<IServicioAutenticacion, ServicioAutenticacion>();
         servicios.AddScoped<IServicioActivos, ServicioActivos>();
+        servicios.AddScoped<IServicioHistorial, ServicioHistorial>();
+        // ServicioHistorial se registra también como concreto para que
+        // ServicioActivos pueda inyectarlo directamente (métodos internos)
+        servicios.AddScoped<ServicioHistorial>();
 
         return servicios;
     }

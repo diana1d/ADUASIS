@@ -35,6 +35,10 @@ public class ContextoAduasis : DbContext
     // ── Sprint 2: Activos ────────────────────────────
     public DbSet<Activo> Activos => Set<Activo>();
 
+    // ── Sprint 3: Historial y Asignaciones ───────────
+    public DbSet<HistorialActivo> HistorialActivos => Set<HistorialActivo>();
+    public DbSet<Asignacion> Asignaciones => Set<Asignacion>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

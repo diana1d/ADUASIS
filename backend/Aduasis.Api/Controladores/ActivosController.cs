@@ -69,7 +69,8 @@ public class ActivosController : ControllerBase
     {
         try
         {
-            var activo = await _servicioActivos.ActualizarAsync(id, solicitud);
+            var usuarioId = ObtenerUsuarioId();
+            var activo = await _servicioActivos.ActualizarAsync(id, solicitud, usuarioId);
             return Ok(activo);
         }
         catch (KeyNotFoundException ex)
