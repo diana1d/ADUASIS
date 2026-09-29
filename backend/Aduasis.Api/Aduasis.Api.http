@@ -1,0 +1,6 @@
+@Aduasis.Api_HostAddress = http://localhost:5249
+
+GET {{Aduasis.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
