@@ -81,3 +81,6 @@ __pycache__/
 # ── Certificados de desarrollo ─────────────────
 *.pfx
 *.p12
+
+# ── Archivos de sesión de trabajo ──────────────
+documentacion/proyecto/CONTEXTO_PROYECTO.md
